@@ -1,0 +1,21 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/obj/Debug/manipulator.csprojAssemblyReference.cache
+/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+obj/Debug/Manipulator.pdb
+obj/Debug/Manipulator.exe
+obj/Debug/manipulator.csproj.GenerateResource.cache
+obj/Debug/manipulator.csproj.FileListAbsolute.txt
+obj/Debug/manipulator.csproj.CopyComplete
+obj/Debug/Manipulation.Properties.Resources.resources
+bin/Debug/nunit.framework.dll
+bin/Debug/Manipulator.pdb
+bin/Debug/Manipulator.exe.config
+bin/Debug/Manipulator.exe
+.vs/manipulator/v16/Server/sqlite3/storage.ide-wal
+.vs/manipulator/v16/Server/sqlite3/storage.ide-shm
+.vs/manipulator/v16/Server/sqlite3/storage.ide
+.vs/manipulator/v16/Server/sqlite3/db.lock
+.vs/manipulator/v16/.suo

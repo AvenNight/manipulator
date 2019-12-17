@@ -14,10 +14,10 @@ namespace Manipulation
 		public static double Shoulder = Math.PI / 2;
 		public static double Step = Math.PI / 18;
 
-		public static Brush UnreachableAreaBrush = new SolidBrush(Color.FromArgb(255, 255, 230, 230));
-		public static Brush ReachableAreaBrush = new SolidBrush(Color.FromArgb(255, 230, 255, 230));
-		public static Pen ManipulatorPen = new Pen(Color.Black, 3);
-		public static Brush JointBrush = Brushes.Gray;
+		public static Brush UnreachableAreaBrush = new SolidBrush(Color.FromArgb(255, 255, 220, 220));
+		public static Brush ReachableAreaBrush = new SolidBrush(Color.FromArgb(255, 220, 255, 220));
+		public static Pen ManipulatorPen = new Pen(Color.Black, 4);
+		public static Brush JointBrush = Brushes.LightSeaGreen;
 
 		/// Реакцию на QAWS и пересчёт Wrist
 		public static void KeyDown(Form form, KeyEventArgs key)
@@ -92,9 +92,11 @@ namespace Manipulation
 				joints[i] = ConvertMathToWindow(joints[i], shoulderPos);
 
 			graphics.DrawLine(ManipulatorPen, shoulderPos, joints[0]);
-			graphics.DrawLines(ManipulatorPen, joints);
-			float r = 5;
-			graphics.FillEllipse(JointBrush, -r, -r, 2 * r, 2 * r);
+			graphics.DrawLine(ManipulatorPen, joints[0], joints[1]);
+			graphics.DrawLine(ManipulatorPen, joints[1], joints[2]);
+
+			float r = 7;
+			graphics.FillEllipse(JointBrush, shoulderPos.X - r, shoulderPos.Y - r, 2 * r, 2 * r);
 			foreach (var e in joints)
 				graphics.FillEllipse(JointBrush, e.X - r, e.Y - r, 2 * r, 2 * r);
 
